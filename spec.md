@@ -1,3 +1,28 @@
+# Ether-1 Discord Bot
+
+## Introduction
+
+@Newsmaker22™#5495 requested a Discord Bot for their cryptocurrency project called `Ether-1`. They will be hosting and maintaining the bot.
+
+## Core Features
+
+Discord bot that responds to the commands provided below, prefixed with "!". 
+
+Respond to messages in specific channels, message from hoisted accounts, delete commands not understood or not allowed. Respond to DMs.
+
+## External Data Required
+
+CoinGecko will provide market data.
+
+```
+chain: hashrate, difficulty, blockTime, height,
+market: price, volume, marketCap, supply,
+```
+
+
+
+# Resources 
+
 ## Public APIs
 
 ### CoinGecko
@@ -7,6 +32,8 @@ https://www.coingecko.com/api/docs/v3#/coins/get_coins__id__history
 Provides market data, current and historical, and social media info
 
 ## Unconfirmed APIs
+
+The team has a minimal API that they can add anything to
 
 Extensive chain stats
 https://stats.ether1.org
@@ -21,10 +48,11 @@ https://github.com/Ether1Project/Ether1/releases
 
 
 
+
+## Commands
+
 ```
 // dynamic
-
-    'pool':           {response: https://pool.pigeoncoin.org/ is at ${capacity} capacity, with ${miners} miners, and ${payoutTime} until next payout},
 
 
 
