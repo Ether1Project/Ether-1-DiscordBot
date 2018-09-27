@@ -11,6 +11,7 @@ client.on("ready", () => {
 });
 
 client.on("disconnect", () => {
+  console.warn(`We were disconnected`);
   client.login(config.token);
 });
 
