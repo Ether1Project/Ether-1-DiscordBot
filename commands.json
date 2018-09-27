@@ -38,7 +38,8 @@
       "text": "https://nodes.ether1.org"
     },
     "whitepaper": {
-      "text": "https://ether1.org/whitepaper.pdf"
+      "text": "https://ether1.org/whitepaper.pdf",
+      "reaction": "📄"
     },
     "wallet": {
       "text": "https://wallet.ether1.org"
