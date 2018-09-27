@@ -1,4 +1,4 @@
-const { token } = require("./config.json");
+const { token, channel } = require("./config.json");
 
 const Discord = require("discord.js");
 const client = new Discord.Client();
@@ -11,15 +11,20 @@ client.on("ready", () => {
 });
 
 client.on("message", message => {
-  const isBot = message.author.id === client.user.id;
-  const isDm = !message.member;
-  const isHoisted = isDm ? false : !!message.member.roles.find("hoist", true);
+  const isBot = message.author.id === client.user.id; // tested
 
-  /// don't reply to our own messages
-  if (!isBot) {
-    console.log(`isHoisted ? ${isHoisted}`);
-    console.log(`isDm ? ${isDm}`);
+  const isDm = !message.member; // tested
+  const isHoisted = isDm ? false : !!message.member.roles.find("hoist", true); // tested
+  const inChannel = isDm ? false : message.channel.id == channel; // tested
+
+  const isAllowed = isDm || isHoisted || inChannel;
+
+  /// igonre our own messages
+  if (isBot) return null;
+
+  if (isAllowed) {
     message.reply("reply ping");
+  } else {
     message.author.send("dm ping");
   }
 });
