@@ -21,7 +21,7 @@ client.on("disconnect", () => {
   client.login(config.token);
 });
 
-client.on("message", message => {
+client.on("message", async message => {
   const isIgnored = checkIgnored(message, client);
   const isAllowed = checkAllowed(message, config.channel);
 
@@ -33,19 +33,28 @@ client.on("message", message => {
 
   const { foundResponse, response } = responder.getResponse(command, store);
 
-  const { text, reaction } = response;
-
-  const foundText = !!text;
-  const foundReaction = !!reaction;
-
   if (foundResponse) {
+    const { text, reaction } = response;
+
+    const foundText = !!text;
+    const foundReaction = !!reaction;
+
     if (isAllowed) {
-      if (foundReaction) message.react(reaction);
-      if (foundText) message.reply(response.text);
+      if (foundReaction) await message.react(reaction);
+      if (foundText) await message.reply(response.text);
     } else {
-      if (foundText) message.author.send(response.text);
+      if (foundText) await message.author.send(response.text);
+      await message.react("👋");
+
+      setTimeout(() => {
+        message.delete();
+      }, 3000);
     }
   } else {
-    console.log("no response");
+    await message.react("❓");
+
+    setTimeout(() => {
+      message.delete();
+    }, 3000);
   }
 });
