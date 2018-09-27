@@ -16,5 +16,8 @@
   "license": "UNLICENSED",
   "devDependencies": {
     "jest": "^23.6.0"
+  },
+  "dependencies": {
+    "discord.js": "^11.4.2"
   }
 }
