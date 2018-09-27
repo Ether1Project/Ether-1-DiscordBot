@@ -1,5 +1,8 @@
 const config = require("./config.json");
-const { checkIgnored, checkAllowed } = require("./utils.js");
+const { checkIgnored, checkAllowed } = require("./lib/utils");
+
+const Responder = require("./lib/Responder.js");
+const responder = new Responder();
 
 const Discord = require("discord.js");
 const client = new Discord.Client();
@@ -21,9 +24,17 @@ client.on("message", message => {
 
   if (isIgnored) return null;
 
-  if (isAllowed) {
-    message.reply("reply ping");
+  /// get response
+  const command = message.content;
+  const { foundResponse, response } = responder.getResponse(command);
+
+  if (foundResponse) {
+    if (isAllowed) {
+      message.reply(response);
+    } else {
+      message.author.send(response);
+    }
   } else {
-    message.author.send("dm ping");
+    console.log("no response");
   }
 });

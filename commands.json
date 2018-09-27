@@ -1,0 +1,4 @@
+{
+  "price": "We are trading at ${price}",
+  "height": "Chain height is ${height}"
+}
