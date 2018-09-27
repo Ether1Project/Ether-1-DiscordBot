@@ -15,7 +15,11 @@ module.exports.checkAllowed = (message, channel) => {
   ///   or from a hoisted member (show separately from other users)
 
   const isDm = !message.member;
-  const isHoisted = isDm ? false : !!message.member.roles.find("hoist", true);
+
+  const isHoisted = isDm
+    ? false
+    : !!message.member.roles.find(role => role.hoist == true);
+
   const inChannel = isDm ? false : message.channel.id == channel;
 
   const isAllowed = isDm || isHoisted || inChannel;
