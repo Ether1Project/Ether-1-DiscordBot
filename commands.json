@@ -1,14 +1,30 @@
 {
   "commands": {
+    "blockchain": "{gigahash} GH, {difficulty} trillion difficulty, {blocktime} sec/block, and retargeting every block.",
     "price": "we are trading at {price} sats",
-    "volume": "we have {volume} BTC of daily volume",
+    "volume": "we have {volume} BTC per day",
     "height": "chain height is {height} blocks",
+    "market": "we're trading at {price} sats, {volume} BTC, and {marketCap} BTC cap.",
     "market cap": "market cap is {marketCap} BTC",
     "block time": "blocktime is {blocktime} seconds",
-    "difficulty": "difficulty is {difficulty}",
-    "hashrate": "hashrate is {gigahash} GH"
+    "difficulty": "difficulty is {difficulty} trillion",
+    "hashrate": "hashrate is {gigahash} GH",
+    "terahash": "hashrate is {terahash} TH",
+    "website": "https://ether1.org",
+    "masternodes": "https://nodes.ether1.org",
+    "whitepaper": "https://ether1.org/whitepaper.pdf",
+    "wallet": "https://wallet.ether1.org",
+    "explorer": "https://explorer.ether1.org",
+    "network": "https://stats.ether1.org",
+    "calendar": "https://ether1.org/calendar/",
+    "releases": "https://github.com/Ether1Project/Ether1/releases"
   },
   "aliases": {
-    "price": ["price btc"]
+    "price": ["price btc"],
+    "blockchain": ["chain"],
+    "website": ["site"],
+    "masternodes": ["nodes"],
+    "network": ["stats"],
+    "calendar": ["roadmap"]
   }
 }
