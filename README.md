@@ -24,11 +24,3 @@
 * Select permissions (alternatively, manually set to `59456`)
 * Copy inivite link
   * eg `https://discordapp.com/api/oauth2/authorize?client_id=CLIENT_ID&permissions=59456&scope=bot`
-
-
-
-Invite Link
-
-```
-https://discordapp.com/oauth2/authorize?client_id=494849754287570946&scope=bot
-```
