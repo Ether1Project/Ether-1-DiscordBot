@@ -1,7 +1,7 @@
 {
   "commands": {
-    "price": "We are trading at ${price}",
-    "height": "Chain height is ${height}"
+    "price": "We are trading at {price}",
+    "height": "Chain height is {height}"
   },
   "aliases": {
     "price": ["market"]

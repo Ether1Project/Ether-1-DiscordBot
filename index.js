@@ -4,6 +4,9 @@ const { checkIgnored, checkAllowed } = require("./lib/utils");
 const { Responder } = require("./lib/Responder.js");
 const responder = new Responder();
 
+const { Aggregator } = require("./lib/Aggregator.js");
+const aggregator = new Aggregator();
+
 const Discord = require("discord.js");
 const client = new Discord.Client();
 
@@ -26,7 +29,9 @@ client.on("message", message => {
 
   /// get response
   const command = message.content;
-  const { foundResponse, response } = responder.getResponse(command);
+  const store = aggregator.getStore();
+
+  const { foundResponse, response } = responder.getResponse(command, store);
 
   if (foundResponse) {
     if (isAllowed) {
