@@ -56,7 +56,7 @@ cp config.example.json config.json
 
 ## C. Configure the bot
 
-- Edit `config.json` 
+- Edit `config.json`
   - to reflect your Discord bot token
   - the Discord ID of the bot channel
 
@@ -64,7 +64,7 @@ cp config.example.json config.json
 
 - Setup PM2
 
-** PM2 is a production-grade daemon for keeping Node.js processes alive**
+*PM2 is a production-grade daemon for keeping Node.js processes alive*
 
 ```
 npm install -g pm2
