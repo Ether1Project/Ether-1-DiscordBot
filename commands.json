@@ -1,10 +1,12 @@
 {
   "commands": {
-    "price": "We are trading at {priceSats} sats",
-    "price usd": "We are trading at {priceUsd}",
-    "volume": "We have {volumeBtc} BTC of daily volume",
-    "height": "Chain height is {height}",
-    "market cap": "Our market cap is {marketCapBtc}"
+    "price": "we are trading at {price} sats",
+    "volume": "we have {volume} BTC of daily volume",
+    "height": "chain height is {height} blocks",
+    "market cap": "market cap is {marketCap} BTC",
+    "block time": "blocktime is {blocktime} seconds",
+    "difficulty": "difficulty is {difficulty}",
+    "hashrate": "hashrate is {gigahash} GH"
   },
   "aliases": {
     "price": ["price btc"]
