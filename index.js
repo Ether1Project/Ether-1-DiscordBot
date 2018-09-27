@@ -1,7 +1,7 @@
 const config = require("./config.json");
 const { checkIgnored, checkAllowed } = require("./lib/utils");
 
-const Responder = require("./lib/Responder.js");
+const { Responder } = require("./lib/Responder.js");
 const responder = new Responder();
 
 const Discord = require("discord.js");
