@@ -57,6 +57,9 @@
     },
     "good bot": {
       "reaction": "👍"
+    },
+    "bad bot": {
+      "reaction": "👎"
     }
   },
   "aliases": {
@@ -66,5 +69,6 @@
     "masternodes": ["nodes"],
     "network": ["stats"],
     "calendar": ["roadmap"]
-  }
+  },
+  "prefixes": ["!", "when", "where", "why", "how"]
 }
