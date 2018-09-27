@@ -1,26 +1,24 @@
-const { token, channel } = require("./config.json");
+const config = require("./config.json");
+const { checkIgnored, checkAllowed } = require("./utils.js");
 
 const Discord = require("discord.js");
 const client = new Discord.Client();
 
-client.login(token);
-console.log(token);
+client.login(config.token);
 
 client.on("ready", () => {
   console.log(`Logged in as ${client.user.tag}`);
 });
 
+client.on("disconnect", () => {
+  client.login(config.token);
+});
+
 client.on("message", message => {
-  const isBot = message.author.id === client.user.id; // tested
+  const isIgnored = checkIgnored(message, client);
+  const isAllowed = checkAllowed(message, config.channel);
 
-  const isDm = !message.member; // tested
-  const isHoisted = isDm ? false : !!message.member.roles.find("hoist", true); // tested
-  const inChannel = isDm ? false : message.channel.id == channel; // tested
-
-  const isAllowed = isDm || isHoisted || inChannel;
-
-  /// igonre our own messages
-  if (isBot) return null;
+  if (isIgnored) return null;
 
   if (isAllowed) {
     message.reply("reply ping");
