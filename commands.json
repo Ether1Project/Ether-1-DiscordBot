@@ -1,23 +1,63 @@
 {
   "commands": {
-    "blockchain": "{gigahash} GH, {difficulty} trillion difficulty, {blocktime} sec/block, and retargeting every block.",
-    "price": "we are trading at {price} sats",
-    "volume": "we have {volume} BTC per day",
-    "height": "chain height is {height} blocks",
-    "market": "we're trading at {price} sats, {volume} BTC, and {marketCap} BTC cap.",
-    "market cap": "market cap is {marketCap} BTC",
-    "block time": "blocktime is {blocktime} seconds",
-    "difficulty": "difficulty is {difficulty} trillion",
-    "hashrate": "hashrate is {gigahash} GH",
-    "terahash": "hashrate is {terahash} TH",
-    "website": "https://ether1.org",
-    "masternodes": "https://nodes.ether1.org",
-    "whitepaper": "https://ether1.org/whitepaper.pdf",
-    "wallet": "https://wallet.ether1.org",
-    "explorer": "https://explorer.ether1.org",
-    "network": "https://stats.ether1.org",
-    "calendar": "https://ether1.org/calendar/",
-    "releases": "https://github.com/Ether1Project/Ether1/releases"
+    "blockchain": {
+      "text": "{gigahash} GH, {difficulty} trillion difficulty, {blocktime} sec/block, and retargeting every block."
+    },
+    "price": {
+      "text": "we are trading at {price} sats"
+    },
+    "volume": {
+      "text": "we have {volume} BTC per day",
+      "reaction": "📈"
+    },
+    "height": {
+      "text": "chain height is {height} blocks"
+    },
+    "market": {
+      "text": "we're trading at {price} sats, {volume} BTC, and {marketCap} BTC cap."
+    },
+    "market cap": {
+      "text": "market cap is {marketCap} BTC"
+    },
+    "block time": {
+      "text": "blocktime is {blocktime} seconds"
+    },
+    "difficulty": {
+      "text": "difficulty is {difficulty} trillion"
+    },
+    "hashrate": {
+      "text": "hashrate is {gigahash} GH"
+    },
+    "terahash": {
+      "text": "hashrate is {terahash} TH"
+    },
+    "website": {
+      "text": "https://ether1.org"
+    },
+    "masternodes": {
+      "text": "https://nodes.ether1.org"
+    },
+    "whitepaper": {
+      "text": "https://ether1.org/whitepaper.pdf"
+    },
+    "wallet": {
+      "text": "https://wallet.ether1.org"
+    },
+    "explorer": {
+      "text": "https://explorer.ether1.org"
+    },
+    "network": {
+      "text": "https://stats.ether1.org"
+    },
+    "calendar": {
+      "text": "https://ether1.org/calendar/"
+    },
+    "releases": {
+      "text": "https://github.com/Ether1Project/Ether1/releases"
+    },
+    "good bot": {
+      "reaction": "👍"
+    }
   },
   "aliases": {
     "price": ["price btc"],

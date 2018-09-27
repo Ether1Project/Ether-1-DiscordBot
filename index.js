@@ -33,11 +33,17 @@ client.on("message", message => {
 
   const { foundResponse, response } = responder.getResponse(command, store);
 
+  const { text, reaction } = response;
+
+  const foundText = !!text;
+  const foundReaction = !!reaction;
+
   if (foundResponse) {
     if (isAllowed) {
-      message.reply(response);
+      if (foundReaction) message.react(reaction);
+      if (foundText) message.reply(response.text);
     } else {
-      message.author.send(response);
+      if (foundText) message.author.send(response.text);
     }
   } else {
     console.log("no response");
