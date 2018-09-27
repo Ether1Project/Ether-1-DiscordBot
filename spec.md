@@ -13,6 +13,7 @@ Respond to messages in specific channels, message from hoisted accounts, delete 
 ## External Data Required
 
 CoinGecko will provide market data.
+https://api.ether1.org/api.php?api=network_stats provides chain data
 
 ```
 chain: hashrate, difficulty, blockTime, height,
