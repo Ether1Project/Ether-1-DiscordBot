@@ -1,0 +1,31 @@
+{
+  "name": "ether-1-bot",
+  "version": "1.0.1",
+  "description": "Official Ether-1 Discord bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "dylie",
+  "license": "ISC",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "coinmarketcap-api": "^3.0.0",
+    "discord-welcome": "^1.5.0",
+    "discord.js": "^11.4.2",
+    "forever-monitor": "^1.7.1",
+    "google-url": "0.0.4",
+    "ms": "^2.1.1",
+    "random-puppy": "^1.1.0",
+    "request-promise-native": "^1.0.7",
+    "snekfetch": "^4.0.4",
+    "string-similarity": "^3.0.0",
+    "weather-js": "^2.0.0",
+    "weather.js": "^0.1.0",
+    "ytdl-core": "^0.29.1"
+  }
+}
