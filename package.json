@@ -18,7 +18,7 @@
     "jest": "^23.6.0"
   },
   "dependencies": {
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "discord.js": "^11.4.2",
     "string-similarity": "^1.2.2"
   }
